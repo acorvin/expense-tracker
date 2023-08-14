@@ -24,26 +24,27 @@
         </div>
     </form>
     <!-- Transaction List -->
-    <table class="table-auto min-w-full divide-y divide-gray-300 mt-6">
-        <thead class="bg-gray-50">
+
+    <table class="w-full text-cleft min-w-full text-sm text-gray-500 dark:text-gray-400 mt-6">
+        <thead class="text-sm text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
         <tr>
-            <th class="p-4 text-left text-sm font-semibold text-gray-900">
+            <th scope="col" class="text-left p-4">
                 Description
             </th>
-            <th class="p-4 text-left text-sm font-semibold text-gray-900">
+            <th scope="col" class="text-left p-4 ">
                 Amount
             </th>
-            <th class="p-4 text-left text-sm font-semibold text-gray-900">
-                Receipt(s)
+            <th scope="col" class="text-left p-4">
+                Receipts
             </th>
-            <th class="p-4 text-left text-sm font-semibold text-gray-900">
+            <th scope="col" class="text-left p-4">
                 Date
             </th>
-            <th>Actions</th>
+            <th scope="col">Actions</th>
         </tr>
         </thead>
         <!-- Transaction Table Body -->
-        <tbody class="divide-y divide-gray-200 bg-white">
+        <tbody class="bg-white">
         <tr>
             <!-- Description -->
             <td class="p-4 text-sm text-gray-600">Item</td>

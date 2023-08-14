@@ -9,3 +9,8 @@ function dd(mixed $value)
     echo"</pre>";
     die();
 }
+
+// Prevent malicious code injection
+function escape(mixed $value): string {
+    return htmlspecialchars((string) $value);
+}
