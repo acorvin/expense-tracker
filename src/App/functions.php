@@ -11,6 +11,6 @@ function dd(mixed $value)
 }
 
 // Prevent malicious code injection
-function escape(mixed $value): string {
+function sanitize(mixed $value): string {
     return htmlspecialchars((string) $value);
 }
