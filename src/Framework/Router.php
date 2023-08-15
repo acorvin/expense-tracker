@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Framework;
 
+use Framework\Exceptions\ContainerException;
+
 class Router
 {
     private array $routes = [];
@@ -29,6 +31,10 @@ class Router
         return $path;
     }
 
+    /**
+     * @throws \ReflectionException
+     * @throws ContainerException
+     */
     public function dispatch(string $path, string $method, Container $container = null): void
     {
         $path = $this->normalizePath($path);
@@ -55,7 +61,7 @@ class Router
         }
     }
 
-    public function addMiddleware(string $middleware)
+    public function addMiddleware(string $middleware): void
     {
         $this->middlewares[] = $middleware;
     }
