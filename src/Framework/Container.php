@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Framework;
 
-use ReflectionClass, ReflectionNamedType;
-use Framework\Exceptions\ContainerException;
+use App\Exceptions\ContainerException;
+use ReflectionClass;
 use ReflectionException;
+use ReflectionNamedType;
 
 #[\AllowDynamicProperties]
 class Container

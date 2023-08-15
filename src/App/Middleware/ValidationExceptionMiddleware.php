@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Middleware;
 
+use App\Exceptions\ValidationException;
 use Framework\Contracts\MiddlewareInterface;
-use Framework\Exceptions\ValidationException;
 
 class ValidationExceptionMiddleware implements MiddlewareInterface
 {
@@ -14,6 +14,7 @@ class ValidationExceptionMiddleware implements MiddlewareInterface
         try{
             $next();
         } catch(ValidationException $e) {
+            $_SESSION['errors'] = $e->errors;
             $referer = $_SERVER['HTTP_REFERER'];
             redirectTo($referer);
         }

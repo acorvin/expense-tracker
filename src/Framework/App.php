@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Framework;
 
-use Framework\Exceptions\ContainerException;
+use App\Exceptions\ContainerException;
 
 class App {
 
