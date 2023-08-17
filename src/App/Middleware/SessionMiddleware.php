@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Middleware;
 
-use App\Exceptions\SessionException;
 use Framework\Contracts\MiddlewareInterface;
+use App\Exceptions\SessionException;
 
 class SessionMiddleware implements MiddlewareInterface
 {

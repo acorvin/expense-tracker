@@ -20,7 +20,7 @@ class AuthController
 
     public function registerView(): void
     {
-        echo $this->view->render("/register.php");
+        echo $this->view->render("register.php");
     }
 
     public function register(): void
