@@ -3,7 +3,8 @@
     "description": "A PHP application for tracking expenses.",
     "type": "project",
     "require": {
-        "ext-pdo": "*"
+        "ext-pdo": "*",
+        "vlucas/phpdotenv": "^5.5"
     },
     "autoload": {
         "psr-4": {
