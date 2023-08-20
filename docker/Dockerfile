@@ -5,6 +5,9 @@ COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 
 # Enable rewrite mode
 RUN a2enmod rewrite
+RUN docker-php-ext-install pdo pdo_mysql
+RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
+
 
 # Install necessary packages
 RUN apt-get update && \
